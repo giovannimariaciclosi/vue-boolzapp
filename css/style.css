@@ -7,3 +7,33 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+#background-navbar {
+  height: 150px;
+  background-color: #009688;
+}
+
+#background-main {
+  /* test */
+  height: 1000px;
+  position: relative;
+  /* /test */
+
+
+  background-color: #dbdbd2;
+}
+
+#app-container {
+
+  /* test */
+  width: 1600px;
+  height: 850px;
+  background-color: lightblue;
+  /* /test */
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -120px;
+  margin: 0 auto;
+}
