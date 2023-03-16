@@ -111,10 +111,10 @@
             <div id="chat-navbar">
               <div class="chat-navbar-left">
                 <div class="image-container">
-                  <img src="img/avatar_4.jpg" alt="">
+                  <img :src="contacts[0].avatar" alt="">
                 </div>
                 <div class="info-container">
-                  <div class="contact-name">Giovanni</div>
+                  <div class="contact-name">{{contacts[0].name}}</div>
                   <div class="contact-last-message">Ultimo messaggio inviato</div>
                 </div>               
               </div>
@@ -128,27 +128,17 @@
             <div id="chat-main">
               <div id="main-chat-container">
 
-                <div class="sent-message-container">
-                  <div class="sent-messagge">
+                <div v-for="(contact, index) in contacts[0].messages" :class="sentOrReceivedContainer(index)">
+                  <div :class="sentOrReceivedInner(index)">
                     <div class="message-text">
-                      Stai tutto fatto!
+                      {{contacts[0].messages[index].message}}
                     </div> 
                     <div class="message-data">
                       16:15
                     </div>
                   </div>
                 </div>
-
-                <div class="receievd-message-container">
-                  <div class="receievd-message">
-                    <div class="message-text">
-                      Stai tutto fatto!
-                    </div> 
-                    <div class="message-data">
-                      16:15
-                    </div>
-                  </div>
-                </div>
+                
               </div>
             </div>
 

@@ -174,6 +174,24 @@ createApp({
 
   methods: {
 
+    sentOrReceivedContainer(contactsIndex) {
+
+        if (this.contacts[contactsIndex].messages[0].status == "sent") {
+            return "received-message-container"
+        } else {
+            return "sent-message-container"
+        };
+      },
+
+      sentOrReceivedInner(contactsIndex) {
+
+        if (this.contacts[contactsIndex].messages[0].status == "sent") {
+            return "received-message"
+        } else {
+            return "sent-message"
+        };
+      },
+
   },
 
 

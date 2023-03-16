@@ -277,6 +277,9 @@ body {
 #chat-main {
   height: calc(100% - 164px);
   background-image: url('../img/mine.jpg');
+
+  overflow: auto;
+
 }
 
 #main-chat-container {
@@ -293,7 +296,7 @@ body {
   justify-content: flex-end;
 }
 
-.sent-messagge {  
+.sent-message {  
   position: relative;
   width: 40%;
   padding: 15px;
@@ -302,13 +305,15 @@ body {
   background-color: #d5f9ba;
 }
 
-.receievd-message-container {
+
+
+.received-message-container {
   width: 100%;
   display: flex;
   justify-content: flex-start;
 }
 
-.receievd-message {
+.received-message {
   position: relative;
   width: 40%;
   padding: 15px;
