@@ -185,7 +185,7 @@ body {
 
   padding: 10px 20px;
   border: 1px solid #e9ebeb;
-  
+
   cursor: pointer;
 }
 
@@ -247,6 +247,33 @@ body {
   /* /test */
 }
 /* /contenitore */
+
+
+#chat-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 20px;
+  background-color: #eaeaea;
+  border-left: 1px solid #d6d6d6;
+
+}
+
+.chat-navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chat-navbar-left .image-container {
+  max-width: 60px;
+}
+
+.chat-navbar-left .image-container img {
+  width: 100%;
+  border-radius: 50%;
+}
 
 
 
