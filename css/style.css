@@ -8,6 +8,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+/* Layout di sfondo */
 #background-navbar {
   height: 150px;
   background-color: #009688;
@@ -16,15 +17,15 @@ body {
 #background-main {
   /* test */
   height: 1000px;
-  position: relative;
   /* /test */
-
-
+  
+  position: relative;
   background-color: #dbdbd2;
 }
+/* /Layout di sfondo */
 
+/* contenitore dell'app */
 #app-container {
-
   /* test */
   width: 1600px;
   height: 850px;
@@ -36,4 +37,161 @@ body {
   right: 0;
   top: -120px;
   margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+/* /contenitore dell'app */
+
+
+/* sezione dei contatti (sinistra) */
+
+/* contenitore */
+#contacts-container {
+  /* test */
+  width: 400px;
+  height: 100%;
+  background-color: lightgreen;
+  /* /test */
+
+  display: flex;
+  flex-direction: column;
+}
+/* /contenitore */
+
+/* sezione profilo utente */
+#user-section {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 20px;
+
+  background-color: #eaeaea;
+}
+
+#user-section .pfp-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#user-section .pfp-image-container {
+  max-width: 60px;
+}
+
+#user-section .pfp-container img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+#user-section .user-name {
+  font-weight: 500;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  color: #b1b1b1;
+  font-size: 1.3em;
+}
+/* /sezione profilo utente */
+
+/* sezione notifiche */
+#notification-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 15px 20px;
+
+  background-color: #8edafc;
+}
+
+#turn-on-notification-icon .fa-bell-slash {
+  font-size: 1.3em;
+  color: #8edafc;
+  background-color: white;
+  padding: 16px 13px;
+  border-radius: 50%;
+}
+
+#notification-text-container #upper-text {
+  font-weight: 500;
+}
+
+#notification-text-container #bottom-text {
+  font-weight: 400;
+  font-size: 0.9em;
+  text-decoration: underline;
+  color: grey;
+}
+
+/* /sezione notifiche */
+
+
+#search-section {
+  background-color: #fafafa;
+}
+
+#search-input-container {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#search-input-container .fa-magnifying-glass {
+  position: absolute;
+  left: 35px;
+
+  color: #b1b1b1;
+}
+
+#search-input-container input {
+  margin: 7px;
+  width: 100%;
+
+  color: #b1b1b1;
+  border: 1px solid #f4f4f4;
+  border-radius: 5px;
+  height: 40px;
+  padding-left: 80px;
+}
+
+#search-input-container input:focus-visible {
+  outline-offset: 0px;
+  border: 1px solid grey;
+}
+
+#contacts-section {
+    /* test */
+  height: 570px;
+    /* /test */
+
+
+  background-color: white;
+}
+
+
+/* /sezione dei contatti (sinistra) */
+
+
+/* sezione della chat (destra) */
+/* contenitore */
+#chat-container{
+  /* test */
+  width: 1200px;
+  height: 100%;
+  background-color: lightsalmon;
+  /* /test */
+}
+/* /contenitore */
+
+
+
+/* /sezione della chat (destra) */

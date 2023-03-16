@@ -24,10 +24,54 @@
   <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
 
     <div id="app">
-
+      
       <div id="background-navbar"></div>
       <div id="background-main">
-        <div id="app-container"></div>
+        <div id="app-container">
+
+          <!-- sezione dei contatti (sinistra) -->
+          <nav id="contacts-container">
+
+            <div id="user-section">
+
+              <div class="pfp-container">
+                <div class="pfp-image-container">
+                  <img src="img/avatar_4.jpg" alt="">
+                </div>
+                <div class="user-name">Giovanni</div>
+              </div>
+              <div class="icon-container">
+                <i class="fa-solid fa-circle-notch"></i>
+                <i class="fa-solid fa-message"></i>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </div>
+            </div>
+
+            <div id="notification-section">
+              <div id="turn-on-notification-icon">
+                <i class="fa-solid fa-bell-slash"></i>
+              </div>
+              <div id="notification-text-container">
+                <div id="upper-text">
+                  Ricevi notifiche di nuovi messaggi
+                </div>
+                <div id="bottom-text">
+                  Attiva notifiche desktop
+                </div>
+              </div>
+
+            </div>
+            <div id="search-section">
+              <div id="search-input-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Cerca o inizia una nuova chat">
+              </div>
+            </div>
+            <div id="contacts-section"></div>
+
+          </nav>
+          <div id="chat-container"></div>
+        </div>
       </div>
 
     </div>
