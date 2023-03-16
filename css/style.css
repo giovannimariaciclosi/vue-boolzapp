@@ -24,6 +24,7 @@ body {
 }
 /* /Layout di sfondo */
 
+
 /* contenitore dell'app */
 #app-container {
   /* test */
@@ -133,6 +134,7 @@ body {
 /* /sezione notifiche */
 
 
+/* sezione input ricerca */
 #search-section {
   background-color: #fafafa;
 }
@@ -163,19 +165,76 @@ body {
   padding-left: 80px;
 }
 
-#search-input-container input:focus-visible {
+/* #search-input-container input:focus-visible {
   outline-offset: 0px;
   border: 1px solid grey;
-}
+} */
 
+/* /sezione input ricerca */
+
+/* sezione messaggi contatti */
 #contacts-section {
-    /* test */
-  height: 570px;
-    /* /test */
-
-
   background-color: white;
+
+  overflow: auto;
+
+  padding-bottom: 100px;
 }
+
+
+.contact-card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding: 10px 20px;
+  border: 1px solid #edede9;
+}
+
+.contact-card-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.contact-pfp-container {
+  max-width: 60px;
+}
+
+.contact-pfp-container img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.contact-info-container {
+
+}
+
+.contact-name {
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.contact-last-message {
+  font-weight: 400;
+  font-size: 0.9em;
+  color: grey;
+}
+
+.contact-card-right {
+
+}
+
+.contact-last-message-data {
+  font-weight: 400;
+  font-size: 0.9em;
+  color: grey;
+}
+
+
+
+/* /sezione messaggi contatti */
+
 
 
 /* /sezione dei contatti (sinistra) */
