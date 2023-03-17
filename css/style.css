@@ -6,6 +6,12 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: #dbdbd2;
+
+}
+
+#app {
+  position: relative;
 }
 
 /* Layout di sfondo */
@@ -13,30 +19,20 @@ body {
   height: 150px;
   background-color: #009688;
 }
-
-#background-main {
-  /* test */
-  height: 1000px;
-  /* /test */
-  
-  position: relative;
-  background-color: #dbdbd2;
-}
 /* /Layout di sfondo */
 
 
 /* contenitore dell'app */
 #app-container {
-  /* test */
-  width: 1600px;
-  height: 850px;
-  background-color: lightblue;
-  /* /test */
+  min-width: 1000px;
+  min-height: 850px;
 
   position: absolute;
-  left: 0;
-  right: 0;
-  top: -120px;
+  left: 50px;
+  right: 50px;
+  top: 30px;
+  bottom: 30px;
+
   margin: 0 auto;
 
   display: flex;
@@ -68,6 +64,7 @@ body {
   align-items: center;
 
   padding: 10px 30px 10px 20px;
+  height: 84px;
 
   background-color: #eaeaea;
 }
@@ -107,6 +104,7 @@ body {
   gap: 10px;
 
   padding: 15px 20px;
+  height: 84px;
 
   background-color: #8edafc;
 }
@@ -144,6 +142,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  height: 40px;
 }
 
 #search-input-container .fa-magnifying-glass {
@@ -178,6 +178,8 @@ body {
   overflow: auto;
 
   padding-bottom: 100px;
+
+  height: calc(100% - 208px);
 }
 
 .contact-card-container {
