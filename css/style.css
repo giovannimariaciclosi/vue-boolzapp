@@ -197,9 +197,13 @@ body {
   background-color: #e9ebeb;
 }
 
+.contact-card-container.active {
+  background-color: #e9ebeb;
+}
+
 .contact-card-left {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
 }
 
@@ -289,39 +293,25 @@ body {
   flex-direction: column;
   gap: 10px;
 
+  align-items: flex-start;
+
   padding: 50px 100px;
 }
 
-.sent-message-container {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.sent-message {  
+.message {  
+  align-self: flex-start;
   position: relative;
-  width: 40%;
-  padding: 15px;
-
-  border-radius: 10px;
-  background-color: #d5f9ba;
-}
-
-
-
-.received-message-container {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.received-message {
-  position: relative;
-  width: 40%;
+  max-width: 60%;
+  min-width: 40%;
   padding: 15px;
 
   border-radius: 10px;
   background-color: white;
+}
+
+.sent {
+  align-self: flex-end;
+  background-color: #d5f9ba;
 }
 
 .message-text {
