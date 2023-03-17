@@ -303,10 +303,12 @@ body {
   position: relative;
   max-width: 60%;
   min-width: 40%;
+  min-height: 50px;
   padding: 15px;
 
   border-radius: 10px;
   background-color: white;
+  word-wrap: break-word;
 }
 
 .sent {

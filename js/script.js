@@ -214,34 +214,62 @@ createApp({
 
     activeContactIndex: 0,
 
+    // inizializzo un nuovo messaggio
     newMessage: {
-        date: '20/03/2023 18:50:33',
+        date: "03:33",
         message: '',
         status: 'sent'
     },
-    
+
     }
   },
 
   methods: {
-
-      changeActiveContactIndex(contactIndex) {
-        // Cambio activeContactIndex in base al contatto cliccato        
+        // funzione per cambiare activeContactIndex in base al contatto cliccato        
+        changeActiveContactIndex(contactIndex) {
+                   
         this.activeContactIndex = contactIndex;
-        console.log(this.activeContactIndex);
-      },
+        // console.log(this.activeContactIndex);
+        },
 
-      addMessage() {
+        // funzione per aggiungere messaggi nella chat
+        addMessage() {
 
-        this.contacts[this.activeContactIndex].messages.push(this.newMessage);
-    
+            // pusho newMessage nuovo messaggio nell'array dei messaggi
+            this.contacts[this.activeContactIndex].messages.push(this.newMessage);
+        
+            // resetto newMessage
+            this.newMessage = {
+                date: '03:33',
+                message: '',
+                status: 'sent'
+            };
+
+            // chiamo la funzione autoReply() dopo 1 secondo
+            setTimeout(()=>{
+                this.autoReply();
+            }, 1000);
+        },
+
+      // funzione di risposta automatica dopo l'invio di un messaggio
+      autoReply() {
+        
+        // preparo il messaggio di risposta
         this.newMessage = {
-            date: '20/03/2023 18:50:33',
+              date: '03:33',
+              message: 'ok',
+              status: 'received'
+            };
+            
+        // lo pusho nell'array dei messaggi
+        this.contacts[this.activeContactIndex].messages.push(this.newMessage);
+
+        // lo resetto
+        this.newMessage = {
+            date: '03:33',
             message: '',
             status: 'sent'
-        };
-
-        console.log(this.contacts[this.activeContactIndex].messages);
+          };
       },
   },
 
