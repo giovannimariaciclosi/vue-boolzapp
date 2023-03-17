@@ -212,16 +212,36 @@ createApp({
             }
         ],
 
-    activeContactIndex: 0,
+        activeContactIndex: 0,
 
-    // inizializzo un nuovo messaggio
-    newMessage: {
-        date: "03:33",
-        message: '',
-        status: 'sent'
-    },
+        // inizializzo un nuovo messaggio
+        newMessage: {
+            date: "03:33",
+            message: '',
+            status: 'sent'
+        },
+
+        filteredItems: [],
+        searchPayload: '',
 
     }
+  },
+
+  watch: {
+    searchPayload: function() {
+        console.log("payload", this.searchPayload);
+
+        //contacts.filter((contacts) => this.contacts.name.toLowerCase);
+         this.filteredItems = this.contacts.filter(contacts => contacts.name.toLowerCase().includes(this.searchPayload.toLowerCase));
+         console.log("filtered", this.filteredItems);
+
+
+    },
+  },
+
+  mounted() {
+    this.filteredItems = this.contacts;
+    // console.log("data", this.filteredItems);
   },
 
   methods: {
@@ -271,6 +291,7 @@ createApp({
             status: 'sent'
           };
       },
+
   },
 
 

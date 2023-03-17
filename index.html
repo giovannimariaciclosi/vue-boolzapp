@@ -70,7 +70,7 @@
             <div id="search-section">
               <div id="search-input-container">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Cerca o inizia una nuova chat">
+                <input v-model="searchPayload" type="text" placeholder="Cerca o inizia una nuova chat">
               </div>
             </div>
             <!-- /sezione input ricerca -->
@@ -79,7 +79,7 @@
             <!-- sezione messaggi contatti -->
             <div id="contacts-section">
              
-              <div @click="changeActiveContactIndex(index)" v-for="(contact, index) in contacts" :class=" index == activeContactIndex ? 'active' : ''" class="contact-card-container">
+              <div @click="changeActiveContactIndex(index)" v-for="(contact, index) in filteredItems" :class=" index == activeContactIndex ? 'active' : ''" class="contact-card-container">
 
                 <div class="contact-card-left">
                   <div class="contact-pfp-container">
