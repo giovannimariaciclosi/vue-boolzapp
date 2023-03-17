@@ -227,21 +227,25 @@ createApp({
     }
   },
 
+
+  //osservo searchPayload
   watch: {
     searchPayload: function() {
-        console.log("payload", this.searchPayload);
 
-        //contacts.filter((contacts) => this.contacts.name.toLowerCase);
-         this.filteredItems = this.contacts.filter(contacts => contacts.name.toLowerCase().includes(this.searchPayload.toLowerCase));
-         console.log("filtered", this.filteredItems);
-
+        // modifico l'array filteredItems in base a searchPayload
+        
+        // console.log(this.searchPayload);
+         this.filteredItems = this.contacts.filter(contact => contact.name.toLowerCase().includes(this.searchPayload.toLowerCase()));
 
     },
   },
 
+  // all'avvio imposto l'array vuoto filteredItems = contacts
   mounted() {
+
     this.filteredItems = this.contacts;
     // console.log("data", this.filteredItems);
+
   },
 
   methods: {

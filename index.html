@@ -78,7 +78,8 @@
 
             <!-- sezione messaggi contatti -->
             <div id="contacts-section">
-             
+
+              <!-- <div @click="changeActiveContactIndex(index)" v-for="(contact, index) in contacts" :class=" index == activeContactIndex ? 'active' : ''" class="contact-card-container" v-show="contacts.filter(contact => contact.name.toLowerCase().includes(searchPayload.toLowerCase()))"> -->
               <div @click="changeActiveContactIndex(index)" v-for="(contact, index) in filteredItems" :class=" index == activeContactIndex ? 'active' : ''" class="contact-card-container">
 
                 <div class="contact-card-left">
