@@ -5,7 +5,7 @@ createApp({
     return {
 
         user: {
-            name: 'Mr. Wolf.btc',
+            name: 'MrWolf.btc',
             avatar: './img/mrwolf.jpg',
             visible: true,
         },
@@ -119,18 +119,33 @@ createApp({
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
-                        message: 'Ciao Claudia, hai novità?',
+                        message: 'Wen 100k?',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:50:00',
-                        message: 'Non ancora',
+                        message: 'Soon',
                         status: 'received'
                     },
                     {
                         date: '10/01/2020 15:51:00',
-                        message: 'Nessuna nuova, buona nuova',
+                        message: 'Wen?',
                         status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        message: 'WAGMI',
+                        status: 'received'
+                    },
+                    {
+                        date: '10/01/2020 15:51:00',
+                        message: 'WEN?!',
+                        status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        message: '1 BTC = 1 BTC',
+                        status: 'received'
                     }
                 ],
             },
@@ -198,29 +213,17 @@ createApp({
         ],
 
     activeContactIndex: 0,
+
+    newMessage: {
+        date: '20/03/2023 18:50:33',
+        message: '',
+        status: 'sent'
+    },
     
     }
   },
 
   methods: {
-
-    sentOrReceivedContainer(contactsIndex) {
-
-        if (this.contacts[contactsIndex].messages[0].status == "sent") {
-            return "received-message-container"
-        } else {
-            return "sent-message-container"
-        };
-      },
-
-      sentOrReceivedInner(contactsIndex) {
-
-        if (this.contacts[contactsIndex].messages[0].status == "sent") {
-            return "received-message"
-        } else {
-            return "sent-message"
-        };
-      },
 
       changeActiveContactIndex(contactIndex) {
         // Cambio activeContactIndex in base al contatto cliccato        
@@ -228,7 +231,20 @@ createApp({
         console.log(this.activeContactIndex);
       },
 
+      addMessage() {
+
+        this.contacts[this.activeContactIndex].messages.push(this.newMessage);
+    
+        this.newMessage = {
+            date: '20/03/2023 18:50:33',
+            message: '',
+            status: 'sent'
+        };
+
+        console.log(this.contacts[this.activeContactIndex].messages);
+      },
   },
+
 
 
 }).mount('#app')
