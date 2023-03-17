@@ -5,16 +5,16 @@ createApp({
     return {
 
         user: {
-            name: 'Mr. Wolf',
-            avatar: './img/avatar_io.jpg',
+            name: 'Mr. Wolf.btc',
+            avatar: './img/mrwolf.jpg',
             visible: true,
         },
 
         // Array contatti
         contacts: [
             {
-                name: 'Michele',
-                avatar: './img/avatar_1.jpg',
+                name: 'carbonara.btc',
+                avatar: './img/carbonara.jpg',
                 visible: true,
                 messages: [
                     {
@@ -35,8 +35,8 @@ createApp({
                 ],
             },
             {
-                name: 'Fabio',
-                avatar: './img/avatar_2.jpg',
+                name: 'lebowskey.btc',
+                avatar: './img/lebowskey.jpg',
                 visible: true,
                 messages: [
                     {
@@ -57,8 +57,8 @@ createApp({
                 ],
             },
             {
-                name: 'Samuele',
-                avatar: './img/avatar_3.jpg',
+                name: 'Mr Tweet',
+                avatar: './img/mr-tweet.jpg',
                 visible: true,
                 messages: [
                     {
@@ -79,8 +79,8 @@ createApp({
                 ],
             },
             {
-                name: 'Giovanni',
-                avatar: './img/avatar_4.jpg',
+                name: 'Noisy',
+                avatar: './img/Noisy.jpg',
                 visible: true,
                 messages: [
                     {
@@ -96,8 +96,8 @@ createApp({
                 ],
             },
             {
-                name: 'Alessandro L.',
-                avatar: './img/avatar_5.jpg',
+                name: 'So Evil',
+                avatar: './img/devil.jpg',
                 visible: true,
                 messages: [
                     {
@@ -113,8 +113,8 @@ createApp({
                 ],
             },
             {
-                name: 'Claudia',
-                avatar: './img/avatar_6.jpg',
+                name: 'Anon',
+                avatar: './img/anon.jpg',
                 visible: true,
                 messages: [
                     {
@@ -135,8 +135,8 @@ createApp({
                 ],
             },
             {
-                name: 'Federico',
-                avatar: './img/avatar_7.jpg',
+                name: 'The Godfather',
+                avatar: './img/godfather.jpg',
                 visible: true,
                 messages: [
                     {
@@ -152,8 +152,8 @@ createApp({
                 ],
             },
             {
-                name: 'Davide',
-                avatar: './img/avatar_8.jpg',
+                name: 'Snoopy',
+                avatar: './img/snoopy.jpg',
                 visible: true,
                 messages: [
                     {
@@ -164,6 +164,28 @@ createApp({
                     {
                         date: '10/01/2020 15:50:00',
                         message: 'No, l\'ho già mangiata ieri, ordiniamo sushi!',
+                        status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:51:00',
+                        message: 'OK!!',
+                        status: 'received'
+                    }
+                ],
+            },
+            {
+                name: 'Mr Police',
+                avatar: './img/policeman.png',
+                visible: true,
+                messages: [
+                    {
+                        date: '10/01/2020 15:30:55',
+                        message: 'Ciao, andiamo a fare serata?',
+                        status: 'received'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        message: 'No, l\'ho già fatta ieri, ordiniamo un kebab!',
                         status: 'sent'
                     },
                     {
