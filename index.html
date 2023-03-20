@@ -128,9 +128,14 @@
             <div id="chat-main">
               <div id="main-chat-container">
 
-                <div v-for="(singleMessage, index) in contacts[activeContactIndex].messages" class="message" :class="singleMessage.status">
+                <div @click="toggle()" v-for="(singleMessage, index) in contacts[activeContactIndex].messages" class="message" :class="singleMessage.status">
                     <div class="message-text">
                       {{singleMessage.message}}
+
+                      <ul v-if="dropdownActive" id="dropdown-menu">
+                        <li>Message info</li>
+                        <li @click="deleteMessage()">Delete message</li>
+                      </ul>
                     </div> 
                     <div class="message-data">
                       {{singleMessage.date}}

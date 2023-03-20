@@ -223,6 +223,7 @@ createApp({
 
         filteredItems: [],
         searchPayload: '',
+        dropdownActive: false
 
     }
   },
@@ -294,6 +295,15 @@ createApp({
             message: '',
             status: 'sent'
           };
+      },
+
+      toggle () {
+        this.dropdownActive = !this.dropdownActive
+      },
+
+      deleteMessage() {
+
+        this.contacts[this.activeContactIndex].messages.slice[0];
       },
 
   },
