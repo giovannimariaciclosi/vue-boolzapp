@@ -191,6 +191,7 @@ body {
   border: 1px solid #e9ebeb;
 
   cursor: pointer;
+
 }
 
 .contact-card-container:hover {
@@ -208,7 +209,8 @@ body {
 }
 
 .contact-pfp-container {
-  max-width: 60px;
+  width: 60px;
+  min-width: 60px;
 }
 
 .contact-pfp-container img {
@@ -229,6 +231,10 @@ body {
   font-weight: 400;
   font-size: 0.9em;
   color: grey;
+
+  max-width: 300px;
+  max-height: 34px;
+  overflow: hidden;
 }
 
 .contact-card-right {
