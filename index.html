@@ -94,7 +94,7 @@
 
                 <div class="contact-card-right">
                   <div class="contact-last-message-data">
-                    {{contact.messages[0].date}}
+                    {{contact.messages[contact.messages.length -1].date}}
                   </div>
                 </div>
               </div>
@@ -115,7 +115,7 @@
                 </div>
                 <div class="info-container">
                   <div class="contact-name">{{contacts[activeContactIndex].name}}</div>
-                  <div class="contact-last-message">Ultimo messaggio in data {{contacts[activeContactIndex].messages[0].date}}</div>
+                  <div class="contact-last-message">Ultimo messaggio in data {{contacts[activeContactIndex].messages[contacts[activeContactIndex].messages.length -1].date}}</div>
                 </div>               
               </div>
               <div class="icon-container">
